@@ -4,6 +4,7 @@ services:
     image: docker.elastic.co/kibana/kibana:$KIBANA_VERSION
     container_name: kibana01-labs
     environment:
+      - ELASTICSEARCH_HOSTS=$ELASTIC_HOSTS
       - ELASTICSEARCH_USERNAME=$ELASTIC_USERNAME
       - ELASTICSEARCH_PASSWORD=$ELASTIC_PASSWORD
     networks:
